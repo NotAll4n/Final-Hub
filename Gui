@@ -418,7 +418,8 @@ while true do
         end
     end
     game:GetService("RunService").Stepped:wait()
-end
+	end
+end)
 
 FlyPlus.Name = "Fly Plus"
 FlyPlus.Parent = GeneralFrame

@@ -117,7 +117,7 @@ local Player = game.Players.LocalPlayer
 Player.Chatted:connect(function(cht)
 if cht:match("RejoinKey") then
 game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
-    end;
+end;
 end)
 
 HoldingFrame.Name = "Holding Frame"

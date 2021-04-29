@@ -108,10 +108,6 @@ local UIPadding_5 = Instance.new("UIPadding")
 local LoveTheme = Instance.new("TextButton")
 local PokemonTheme = Instance.new("TextButton")
 local DbzTheme = Instance.new("TextButton")
-local ExtraGui = Instance.new("ScreenGui")
-local WingFrame = Instance.new("Frame")
-local ColorTitle = Instance.new("TextLabel")
-local ColorWing = Instance.new("TextBox")
 
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -146,7 +142,6 @@ usi.InputBegan:Connect(function(io, p)
 			TitleFrame.Visible = false
 			VisionFrame.Visible = false
 			WingFrame.Visible = false
-			StatFrame.Visible = false
 		end
 	end
 end)
@@ -1428,54 +1423,13 @@ NoLvl_2.Font = Enum.Font.Fantasy
 NoLvl_2.Text = "Color WingsHalo"
 NoLvl_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 NoLvl_2.TextSize = 13.000
-toggle = false
 NoLvl_2.MouseButton1Down:connect(function()
-    if toggle == false
-    then toggle = true
-WingFrame.Visible = true
-
-WingFrame.Name = "Wing Frame"
-WingFrame.Parent = ExtraGui
-WingFrame.BackgroundColor3 = Color3.fromRGB(137, 188, 225)
-WingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-WingFrame.Position = UDim2.new(0.651515126, 0, 0.306791574, 0)
-WingFrame.Size = UDim2.new(0, 100, 0, 100)
-WingFrame.Draggable = true
-
-ColorTitle.Name = "Color Title"
-ColorTitle.Parent = WingFrame
-ColorTitle.BackgroundColor3 = Color3.fromRGB(137, 188, 225)
-ColorTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ColorTitle.Size = UDim2.new(0, 100, 0, 35)
-ColorTitle.Font = Enum.Font.Fantasy
-ColorTitle.Text = "Color:"
-ColorTitle.TextColor3 = Color3.fromRGB(0, 0, 0)
-ColorTitle.TextSize = 14.000
-
-ColorWing.Name = "Color Wing"
-ColorWing.Parent = WingFrame
-ColorWing.BackgroundColor3 = Color3.fromRGB(137, 188, 225)
-ColorWing.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ColorWing.Position = UDim2.new(0, 0, 0.449999988, 0)
-ColorWing.Size = UDim2.new(0, 100, 0, 43)
-ColorWing.Font = Enum.Font.Fantasy
-ColorWing.Text = ""
-ColorWing.TextColor3 = Color3.fromRGB(0, 0, 0)
-ColorWing.TextSize = 15.000
 
 if game.Players.LocalPlayer.Character:FindFirstChild("RebirthWings") then
-    game.Players.LocalPlayer.Character.RebirthWings.Handle.Color = (color)
+    game.Players.LocalPlayer.Character.RebirthWings.Handle.Color = (WingColor)
         elseif game.Players.LocalPlayer.Character:FindFirstChild("RealHalo") then
-    game.Players.LocalPlayer.Character.RealHalo.Handle.Color = (ColorWings.Text)
-end
- if game.Players.LocalPlayer.Character:FindFirstChild("RebirthWings") then
-    game.Players.LocalPlayer.Character.RebirthWings.Handle.Color = (color)
-        elseif game.Players.LocalPlayer.Character:FindFirstChild("RealHalo") then
-    game.Players.LocalPlayer.Character.RealHalo.Handle.Color = (ColorWings.Text)
-end
-else toggle = false
-    WingFrame.Visible = false
-end
+    game.Players.LocalPlayer.Character.RealHalo.Handle.Color = (WingColor)
+    end
 end)
 
 VisionFrame.Name = "Vision Frame"

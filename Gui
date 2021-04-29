@@ -398,7 +398,7 @@ local character = player.Character or player.CharacterAdded:Wait()
 local mouse = player:GetMouse()
 
 mouse.KeyDown:Connect(function(key)
-    if key == NoClip then
+    if key == NoClipKey then
         noclip = not noclip
         if not StealthMode then
         end
@@ -418,8 +418,7 @@ while true do
         end
     end
     game:GetService("RunService").Stepped:wait()
-	end
-end)
+end
 
 FlyPlus.Name = "Fly Plus"
 FlyPlus.Parent = GeneralFrame

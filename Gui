@@ -112,10 +112,6 @@ local DbzTheme = Instance.new("TextButton")
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-ExtraGui.Name = "Extra Gui"
-ExtraGui.Parent = game.CoreGui
-ExtraGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
 HoldingFrame.Name = "Holding Frame"
 HoldingFrame.Parent = ScreenGui
 HoldingFrame.BackgroundColor3 = Color3.fromRGB(137, 188, 225)

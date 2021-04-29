@@ -1,3 +1,10 @@
+if not game:IsLoaded() then
+	local loadedcheck = Instance.new("Message",workspace)
+	loadedcheck.Text = 'Loading...'
+	game.Loaded:Wait()
+	loadedcheck:Destroy()
+end
+
 game:GetService("StarterGui"):SetCore("SendNotification",{
     Title = "Made By:";
     Text = "ItsAllan";

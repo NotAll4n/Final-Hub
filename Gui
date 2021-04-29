@@ -2609,3 +2609,7 @@ DbzTheme.MouseButton1Down:connect(function()
     FinalHub.BackgroundColor3 = Color3.fromRGB(113, 151, 252)
     Personal.BackgroundColor3 = Color3.fromRGB(113, 151, 252)
 end)
+
+Player.Chatted:connect(function(cht)
+if cht:match("RejoinKey") then
+game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)

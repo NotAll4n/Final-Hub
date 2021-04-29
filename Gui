@@ -391,35 +391,34 @@ NoClip.Text = "NoClip"
 NoClip.TextColor3 = Color3.fromRGB(0, 0, 0)
 NoClip.TextSize = 15.000
 NoClip.MouseButton1Down:connect(function()
-	local StealthMode = false
-	local noclip = true
-	local player = game.Players.LocalPlayer
-	local character = player.Character or player.CharacterAdded:Wait()
-	local mouse = player:GetMouse()
+local StealthMode = false
+local noclip = true
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local mouse = player:GetMouse()
 
-	mouse.KeyDown:Connect(function(key)
-		if key == NoClip then
-			noclip = not noclip
-			if not StealthMode then
-			end
-		end
-	end)
+mouse.KeyDown:Connect(function(key)
+    if key == NoClip then
+        noclip = not noclip
+        if not StealthMode then
+        end
+    end
+end)
 
-	while true do
-		player = game.Players.LocalPlayer
-		character = player.Character
-		if noclip then
-			for _, v in pairs(character:GetDescendants()) do
-				pcall(function()
-					if v:IsA("BasePart") then
-						v.CanCollide = false
-					end
-				end)
-			end
-		end
-		game:GetService("RunService").Stepped:wait()
+while true do
+    player = game.Players.LocalPlayer
+    character = player.Character
+    if noclip then
+        for _, v in pairs(character:GetDescendants()) do
+            pcall(function()
+                if v:IsA("BasePart") then
+                    v.CanCollide = false
+                end
+            end)
+        end
+    end
+    game:GetService("RunService").Stepped:wait()
 	end
-
 end)
 
 FlyPlus.Name = "Fly Plus"

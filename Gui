@@ -1,3 +1,13 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "Made By:";
+    Text = "ItsAllan";
+})
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "Gui";
+    Text = "Toggle: RightCtrl";
+})
+
 local ScreenGui = Instance.new("ScreenGui")
 local HoldingFrame = Instance.new("Frame")
 local TitleFrame = Instance.new("Frame")

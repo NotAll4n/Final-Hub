@@ -116,9 +116,17 @@ local Player = game.Players.LocalPlayer
 
 Player.Chatted:connect(function(cht)
 if cht:match("-rj") then
-game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+       	game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
 end;
 end)
+
+local vu = game:GetService("VirtualUser")
+	game:GetService("Players").LocalPlayer.Idled:connect(function()
+		wait(3)
+		vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		wait(1)
+		vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+	end)
 
 HoldingFrame.Name = "Holding Frame"
 HoldingFrame.Parent = ScreenGui

@@ -1092,8 +1092,13 @@ AntiWorm.Text = "Anti WormHole"
 AntiWorm.TextColor3 = Color3.fromRGB(0, 0, 0)
 AntiWorm.TextSize = 15.000
 AntiWorm.MouseButton1Down:connect(function()
-	local plr = game.Players.LocalPlayer
-	game.Workspace["Wormhole"].TouchInterest:Destroy()
+	for i , v in pairs (workspace:GetDescendants()) do
+  if string.find(v.Name, "Wormhole") then
+    if v:IsA("Part") then
+        v:Destroy()
+    end
+  end
+end
 end)
 
 SlotChanger.Name = "Slot Changer"
